@@ -32,6 +32,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Build Docker image
+        working-directory: esg-monitor
         run: docker build -t esg-app:${{ github.sha }} .
       - name: Deploy to Staging
         run: |
