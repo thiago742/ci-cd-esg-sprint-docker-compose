@@ -1,0 +1,3 @@
+spring security:
+	identificação: identificar usuario e sua role (usuario comum ou administrador com mais permissões)
+	autenticação: definir permissões ao usuário dependendo de sua role
