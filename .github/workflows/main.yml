@@ -18,8 +18,10 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
+        working-directory: esg-monitor
         run: mvn -B package --file pom.xml
       - name: Run tests
+        working-directory: esg-monitor
         run: mvn test
   deploy_staging:
     name: Deploy to Staging
