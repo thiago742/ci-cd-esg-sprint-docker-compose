@@ -18,10 +18,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        working-directory: esg-monitor
         run: mvn -B package --file pom.xml
       - name: Run tests
-        working-directory: esg-monitor
         run: mvn test
   deploy_staging:
     name: Deploy to Staging
@@ -32,7 +30,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Build Docker image
-        working-directory: esg-monitor
+      - name: Build Docker image
         run: docker build -t esg-app:${{ github.sha }} .
       - name: Deploy to Staging
         run: |
