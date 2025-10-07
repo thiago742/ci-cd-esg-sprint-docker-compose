@@ -4,6 +4,8 @@
 1. Clone este repositório.
 2. Certifique-se de ter o Docker e o Docker Compose instalados.
 3. Na raiz do projeto, execute o comando: `docker-compose up --build`.
+  (cd esg-monitor
+  docker-compose up --build)
 4. A aplicação estará disponível em `http://localhost:8080`.
 
 ## Pipeline CI/CD
@@ -32,13 +34,17 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
 ## Prints do funcionamento
-*(Insira aqui prints do pipeline do GitHub Actions rodando, da aplicação acessada no navegador em localhost, e dos ambientes de staging e produção, se aplicável)*
+print:
+https://prnt.sc/DnJgI4mUhn2r
+
+link do repositório:
+https://github.com/thiago742/ci-cd-esg-sprint-docker-compose
 
 ## Tecnologias utilizadas
 - Java 17
 - Spring Boot
 - Maven
-- PostgreSQL
+- Oracle DB
 - Docker & Docker Compose
 - GitHub Actions
 
